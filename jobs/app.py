@@ -22,11 +22,7 @@ def execute_sql(sql, values = (), commit = False, single = False):
         cursor.close
         return results
 
-@app.teardown_appcontext
-def close_connection(excpetion):
-    connection = getattr(g, '_connection', None)
-    if connection = None:
-        connection.close()
+
 
 
 
